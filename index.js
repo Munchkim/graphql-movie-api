@@ -5,13 +5,13 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-// Sample in-memory data
+
 const movies = [
     { id: "1", title: "Inception", director: "Christopher Nolan", releaseYear: 2010 },
     { id: "2", title: "Interstellar", director: "Christopher Nolan", releaseYear: 2014 }
 ];
 
-// Define GraphQL schema
+
 const typeDefs = gql`
     type Movie {
         id: ID!
@@ -28,7 +28,7 @@ const typeDefs = gql`
     }
 `;
 
-// Define resolvers
+
 const resolvers = {
     Query: {
         getMovies: () => movies,
