@@ -1,0 +1,26 @@
+ query {
+  getMovies {
+    id
+    title
+    director
+    releaseYear
+  }
+}
+
+query {
+  getMovie(id: "2") {
+    id
+    title
+    director
+    releaseYear
+  }
+}
+
+mutation {
+  addMovie(title: "The Dark Knight", director: "Christopher Nolan", releaseYear: 2008) {
+    id
+    title
+    director
+    releaseYear
+  }
+}
